@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Grid Layout with Sidebar</title>
+    <title>Dev Board</title>
+    <link rel="stylesheet" href="./styles/index.css">
+    <!-- daisyUI -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
 </head>
 <body class="bg-gray-100 p-5">
-    <header class=" mx-auto container  bg-slate-200 ">
+    <header class=" mx-auto container  bg-white">
         <!-- navbar section -->
         <section class="m-2 h-18">
             <nav class="flex items-center justify-between ">
@@ -18,14 +22,14 @@
                 </div>
                 <!-- devboard -->
      
-                 <div class="notification flex gap-5 mt-2">
-                     <div class="flex gap-2 items-center bg-white rounded-3xl p-3">
+                 <div id="notification-count" class=" flex gap-5 mt-2">
+                     <div class="flex gap-2 items-center bg-gray-200 rounded-3xl p-3">
                          <button><img src="./A5-Dev-Board-main/A5-Dev-Board-main/assets/checkbox.png" alt=""></button>
      
-                         <span class="count" id="notification-count">23</span>
+                         <span class="count" >23</span>
                          
                      </div>
-                     <button><img src="./A5-Dev-Board-main/A5-Dev-Board-main/assets/theme-btn.png" alt=""></button>
+                     <button id="random-color"><img src="./A5-Dev-Board-main/A5-Dev-Board-main/assets/theme-btn.png" alt=""></button>
                  </div>
              </nav>
         </section>
@@ -41,13 +45,13 @@
                 <button>
                     <img src="./A5-Dev-Board-main/A5-Dev-Board-main/assets/checkbox.png" alt="">
                 </button>
-                <div>
+                <div id="task">
                     <h1>Task Assigned</h1>
                 <p>05</p>
                 </div>
             </div>
 
-            <div class="bg-white p-5 shadow-lg rounded-lg col-span-2 flex items-center bg-gradient-to-l from-blue-300 to-blue-500">
+            <div id="discover-something" class="bg-white p-5 shadow-lg rounded-lg col-span-2 flex items-center bg-gradient-to-l from-blue-300 to-blue-500">
                 <img class="w-16" src="./A5-Dev-Board-main/A5-Dev-Board-main/assets/board.png" alt="">
                 <div>
                     <h1>Discover Something <br> New Today</h1>
@@ -64,108 +68,109 @@
             </div>
             
             <!-- first box -->
-            <div>
+            <div id="first-box">
                 <div class="bg-white p-5 shadow-lg rounded-lg flex flex-col justify-between ">
                     <div>
                         <h3 class="text-lg font-semibold">Shop Ease</h3>
-                        <h2 class="text-xl font-bold">Fix Mobile Button Issue</h2>
-                        <p class="text-gray-600 mt-2">There is an issue with the mobile button that needs to be resolved to improve user experience.</p>
+                        <h2 id="caption" class="text-xl font-bold">Fix Mobile Button Issue</h2>
+                        <p class="text-gray-600 mt-2">Debug using Chrome DevTools, check for overlapping elements, and ensure onClick works properly
+                            and ensure onClick works properly</p>
                     </div>
                     <div class="flex justify-between items-center mt-4">
                         <span class="text-sm text-gray-500">Deadline: 2025-03-10</span>
-                        <button class="bg-green-500 text-white px-4 py-2 rounded">Completed</button>
+                        <button id="btn" class="bg-blue-500 text-white px-4 py-2 rounded">Completed</button>
                     </div>
                 </div>
             </div>
              <!-- secod box -->
-            <div class="">
+            <div class="second-box">
                 <div class="bg-white p-5 shadow-lg rounded-lg flex flex-col justify-between ">
                     <div>
-                        <h3 class="text-lg font-semibold">Shop Ease</h3>
-                        <h2 class="text-xl font-bold">Fix Mobile Button Issue</h2>
+                        <h3 class="text-lg font-semibold">CloudSync</h3>
+                        <h2 id="caption-two" class="text-xl font-bold">Add Dark Mode</h2>
                         <p class="text-gray-600 mt-2">There is an issue with the mobile button that needs to be resolved to improve user experience.</p>
                     </div>
                     <div class="flex justify-between items-center mt-4">
                         <span class="text-sm text-gray-500">Deadline: 2025-03-10</span>
-                        <button class="bg-green-500 text-white px-4 py-2 rounded">Completed</button>
+                        <button id="btn-two" class="bg-blue-500 text-white px-4 py-2 rounded">Completed</button>
                     </div>
                 </div>
             </div> 
-            <div class="">
+            <div class="third-box">
                 <div class="bg-white p-5 shadow-lg rounded-lg flex flex-col justify-between ">
                     <div>
                         <h3 class="text-lg font-semibold">Shop Ease</h3>
-                        <h2 class="text-xl font-bold">Fix Mobile Button Issue</h2>
+                        <h2 id="caption" class="text-xl font-bold">Fix Mobile Button Issue</h2>
                         <p class="text-gray-600 mt-2">There is an issue with the mobile button that needs to be resolved to improve user experience.</p>
                     </div>
                     <div class="flex justify-between items-center mt-4">
                         <span class="text-sm text-gray-500">Deadline: 2025-03-10</span>
-                        <button class="bg-green-500 text-white px-4 py-2 rounded">Completed</button>
+                        <button id="btn" class="bg-blue-500 text-white px-4 py-2 rounded">Completed</button>
                     </div>
                 </div>
             </div> 
-            <div class="">
+            <div class="fourth-box">
                 <div class="bg-white p-5 shadow-lg rounded-lg flex flex-col justify-between ">
                     <div>
                         <h3 class="text-lg font-semibold">Shop Ease</h3>
-                        <h2 class="text-xl font-bold">Fix Mobile Button Issue</h2>
+                        <h2 id="caption" class="text-xl font-bold">Fix Mobile Button Issue</h2>
                         <p class="text-gray-600 mt-2">There is an issue with the mobile button that needs to be resolved to improve user experience.</p>
                     </div>
                     <div class="flex justify-between items-center mt-4">
                         <span class="text-sm text-gray-500">Deadline: 2025-03-10</span>
-                        <button class="bg-green-500 text-white px-4 py-2 rounded">Completed</button>
+                        <button id="btn" class="bg-blue-500 text-white px-4 py-2 rounded">Completed</button>
                     </div>
                 </div>
             </div> 
-            <div class="">
+            <div class="fifth-box">
                 <div class="bg-white p-5 shadow-lg rounded-lg flex flex-col justify-between ">
                     <div>
                         <h3 class="text-lg font-semibold">Shop Ease</h3>
-                        <h2 class="text-xl font-bold">Fix Mobile Button Issue</h2>
+                        <h2 id="caption" class="text-xl font-bold">Fix Mobile Button Issue</h2>
                         <p class="text-gray-600 mt-2">There is an issue with the mobile button that needs to be resolved to improve user experience.</p>
                     </div>
                     <div class="flex justify-between items-center mt-4">
                         <span class="text-sm text-gray-500">Deadline: 2025-03-10</span>
-                        <button class="bg-green-500 text-white px-4 py-2 rounded">Completed</button>
+                        <button id="btn" class="bg-blue-500 text-white px-4 py-2 rounded">Completed</button>
                     </div>
                 </div>
             </div> 
-            <div class="">
+            <div class="sixth-box">
                 <div class="bg-white p-5 shadow-lg rounded-lg flex flex-col justify-between ">
                     <div>
                         <h3 class="text-lg font-semibold">Shop Ease</h3>
-                        <h2 class="text-xl font-bold">Fix Mobile Button Issue</h2>
+                        <h2 id="caption" class="text-xl font-bold">Fix Mobile Button Issue</h2>
                         <p class="text-gray-600 mt-2">There is an issue with the mobile button that needs to be resolved to improve user experience.</p>
                     </div>
                     <div class="flex justify-between items-center mt-4">
                         <span class="text-sm text-gray-500">Deadline: 2025-03-10</span>
-                        <button class="bg-green-500 text-white px-4 py-2 rounded">Completed</button>
+                        <button id="btn" class="bg-blue-500 text-white px-4 py-2 rounded">Completed</button>
                     </div>
                 </div>
             </div> 
-            <div class="">
+            <div class="seventh-box">
                 <div class="bg-white p-5 shadow-lg rounded-lg flex flex-col justify-between ">
                     <div>
                         <h3 class="text-lg font-semibold">Shop Ease</h3>
-                        <h2 class="text-xl font-bold">Fix Mobile Button Issue</h2>
+                        <h2 id="caption" class="text-xl font-bold">Fix Mobile Button Issue</h2>
                         <p class="text-gray-600 mt-2">There is an issue with the mobile button that needs to be resolved to improve user experience.</p>
                     </div>
                     <div class="flex justify-between items-center mt-4">
                         <span class="text-sm text-gray-500">Deadline: 2025-03-10</span>
-                        <button class="bg-green-500 text-white px-4 py-2 rounded">Completed</button>
+                        <button id="btn" class="bg-blue-500 text-white px-4 py-2 rounded">Completed</button>
                     </div>
                 </div>
             </div> 
-            <div class="">
+            <div class="eigth-box">
                 <div class="bg-white p-5 shadow-lg rounded-lg flex flex-col justify-between ">
                     <div>
                         <h3 class="text-lg font-semibold">Shop Ease</h3>
-                        <h2 class="text-xl font-bold">Fix Mobile Button Issue</h2>
+                        <h2 id="caption" class="text-xl font-bold">Fix Mobile Button Issue</h2>
                         <p class="text-gray-600 mt-2">There is an issue with the mobile button that needs to be resolved to improve user experience.</p>
                     </div>
                     <div class="flex justify-between items-center mt-4">
                         <span class="text-sm text-gray-500">Deadline: 2025-03-10</span>
-                        <button class="bg-green-500 text-white px-4 py-2 rounded">Completed</button>
+                        <button id="btn" class="bg-blue-500 text-white px-4 py-2 rounded">Completed</button>
                     </div>
                 </div>
             </div> 
@@ -176,13 +181,19 @@
         </div>
         
         <!-- Sidebar -->
-        <div class="w-1/3 bg-gray-200 p-5 shadow-lg rounded-lg ">
+        <div id="activity-log" class="w-1/3 bg-white p-5 shadow-lg rounded-lg ">
             <div class="flex gap-4 items-center justify-center">
-                <img class="" src="./A5-Dev-Board-main/A5-Dev-Board-main/assets/activity.png" alt="">
+                <img class="border" src="./A5-Dev-Board-main/A5-Dev-Board-main/assets/activity.png" alt="">
                 <h1>Activity Log</h1>
             </div>
             <button class="btn mt-3 bg-blue-400 rounded-3xl p-4 ml-44 ">Clear History</button>
         </div>
     </div>
+
+    <!-- javascript src -->
+     <script src="./script/randomColor.js"></script>
+     <script src="./script/discover.js"></script>
+     <script src="./script/complete.js"></script>
+     <script src="./script/box-two.js"></script>
 </body>
 </html>
