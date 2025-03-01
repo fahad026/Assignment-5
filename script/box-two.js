@@ -1,38 +1,39 @@
-document.addEventListener("DOMContentLoaded", function() {
-    // Get all the necessary elements
-    const taskAssignedElement = document.querySelector('#task p'); // Element showing task count
-    const notificationCountElement = document.querySelector('#notification-count .count'); // Notification count
-    const activityLogElement = document.querySelector('#activity-log'); // Activity log element
-    const firstBoxCaption = document.querySelector('#second-box #caption-two'); // Caption of the first box
-    const completedButton = document.querySelector('#second-box button'); // "Completed" button in the first box
-    
-    // Define initial counts (set them accordingly if you have data)
-    let taskCount = parseInt(taskAssignedElement.textContent) || 0;
-    let notificationCount = parseInt(notificationCountElement.textContent) || 23;
+document.addEventListener('DOMContentLoaded', function () {
+    // Get elements for task and notification counts
+    const taskCount = document.querySelector('#task p');
+    const notificationCount = document.querySelector('#notification-count .count');
+    const activityLog = document.querySelector('#activity-log');
 
-    // Function to update task count and notification count
-    function updateCounts() {
-        taskAssignedElement.textContent = taskCount;
-        notificationCountElement.textContent = notificationCount;
+    // Get the button for the second box
+    const secondBoxBtn = document.querySelector('#btn-two');  // Button in the second box
+
+    // Function to handle task completion
+    function handleTaskCompletion() {
+        // Reduce the task count by 1
+        let taskValue = parseInt(taskCount.textContent);
+        taskCount.textContent = taskValue - 1;
+
+        // Increase notification count by 1
+        let notificationValue = parseInt(notificationCount.textContent);
+        notificationCount.textContent = notificationValue + 1;
+
+        // Get the caption of the second box
+        const taskCaption = document.querySelector('#caption-two').textContent;
+
+        // Create a new entry in the activity log
+        const activityEntry = document.createElement('p');
+        activityEntry.textContent = `Completed Task: ${taskCaption}`;
+        activityLog.appendChild(activityEntry);
+
+        // Disable the button and change its opacity
+        secondBoxBtn.disabled = true;
+        secondBoxBtn.style.opacity = 0.5;
     }
 
-    // Function to handle the completed button click
-    completedButton.addEventListener('click', function() {
-        // Disable the completed button after clicking
-        completedButton.disabled = true;
-        
-        // Reduce task count
-        taskCount -= 1;
-        
-        // Increase notification count
-        notificationCount += 1;
-        
-        // Show the caption in the activity log
-        const activityLogItem = document.createElement('div');
-        activityLogItem.textContent = ` ${firstBoxCaption.textContent}`;
-        activityLogElement.appendChild(activityLogItem);
-        
-        // Update the counts on the page
-        updateCounts();
-    });
+    // Add event listener to the second box button
+    if (secondBoxBtn) {
+        secondBoxBtn.addEventListener('click', handleTaskCompletion);
+    } else {
+        console.log('Second button not found.');
+    }
 });
