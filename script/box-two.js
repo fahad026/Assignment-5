@@ -23,11 +23,22 @@ document.addEventListener('DOMContentLoaded', function () {
         // Create a new entry in the activity log
         const activityEntry = document.createElement('p');
         activityEntry.textContent = `Completed Task: ${taskCaption}`;
+        
+        // Style the activity entry with a light gray background
+        activityEntry.style.backgroundColor = '#f0f0f0';  // Light gray background
+        activityEntry.style.padding = '8px';
+        activityEntry.style.margin = '5px 0';
+        activityEntry.style.borderRadius = '4px';
+
+        // Append the activity entry to the log
         activityLog.appendChild(activityEntry);
 
         // Disable the button and change its opacity
         secondBoxBtn.disabled = true;
         secondBoxBtn.style.opacity = 0.5;
+
+        // Alert the user that the task has been completed
+        alert(`Task "${taskCaption}" has been completed!`);
     }
 
     // Add event listener to the second box button
