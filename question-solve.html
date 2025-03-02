@@ -1,50 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blog</title>
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/index.css" />
     <!-- daisyui -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
 
-<body class="bg-gray-200">
-    <header class=" mx-auto container  bg-white rounded-lg p-2 ">
-        <!-- navbar section -->
-        <section>
-            <nav class="flex items-center justify-between mt-2 mb-3">
-                <!-- devboard -->
-                <div class="flex items-center mt-4 ">
-                 <img class="w-10" src="./A5-Dev-Board-main/A5-Dev-Board-main/assets/logo.png" alt="">
-                 <div class="logo text-xl">Dev<span class="text-2xl font-bold">Board</span></div>
-                </div>
-                <!-- devboard -->
-     
-                 <div class="notification flex gap-5 mt-2">
-                    
-                     <button id="back-desk" class="btn bg-blue-500 rounded-2xl"> Back to Desk</button>
-                 </div>
-             </nav>
-        </section>
-         <!-- navbar section end-->
-    </header>
-    <main>
-        <section >
-            <div class="text-center">
-                <h1 class="text-2xl font-bold">Blogs</h1>
-            </div>
-        </section>
-
-        <div tabindex="0" class="collapse collapse-open bg-base-100 border-base-300 border ml-48">
-            <div class="collapse-title font-semibold">I have collapse-open class</div>
-            <div class="collapse-content text-sm">
-              Click the "Sign Up" button in the top right corner and follow the registration process.
+  <body class="bg-gray-200">
+    <header class="mx-auto container bg-white rounded-lg p-2">
+      <!-- navbar section -->
+      <section>
+        <nav class="flex items-center justify-between mt-2 mb-3">
+          <!-- devboard -->
+          <div class="flex items-center mt-4">
+            <img
+              class="w-10"
+              src="./A5-Dev-Board-main/A5-Dev-Board-main/assets/logo.png"
+              alt=""
+            />
+            <div class="logo text-xl">
+              Dev<span class="text-2xl font-bold">Board</span>
             </div>
           </div>
+          <!-- devboard -->
+
+          <div class="notification flex gap-5 mt-2">
+            <button id="back-desk" class="btn bg-blue-500 rounded-2xl">
+              Back to Desk
+            </button>
+          </div>
+        </nav>
+      </section>
+      <!-- navbar section end-->
+    </header>
+    <main>
+      <section>
+        <div class="text-center">
+          <h1 class="text-2xl font-bold m-5">Blogs</h1>
+        </div>
+      </section>
+      <!-- question-1 -->
+      <div
+        tabindex="0"
+        class="collapse collapse-open bg-base-100 border-base-300 border container mx-auto"
+      >
+        <div class="collapse-title font-semibold text-lg">
+          Question-1: What are the different ways to select element in the DOM?
+          <hr />
+        </div>
+        <div class="collapse-content">
+          <p class="text-xl">
+            JavaScript DOM has many ways to select elements like getElementById,
+            getElementsByClassName, getElementsByTagName,
+            querySelector,querySelectorAll
+          </p>
+        </div>
+      </div>
+      <!-- question-2 -->
+      <div
+        tabindex="0"
+        class="collapse collapse-open bg-base-100 border-base-300 border container mx-auto m-5"
+      >
+        <div class="collapse-title font-semibold text-lg">
+          Question-1: What is the difference between innerHTML, innerText, and textContent?
+          <hr />
+        </div>
+        <div class="collapse-content text-lg">
+         
+           <ol>
+            <li>1. innerHTML: When you need to insert or retrieve HTML content.  </li>
+            <li>2. innerText: When you need only the visible text from an element.</li>
+            <li>3. textContent: When you need to get all text content, including hidden text.</li>
+           </ol>
+          
+        </div>
+      </div>
+
+      <!-- question-3 -->
+      <div
+      tabindex="0"
+      class="collapse collapse-open bg-base-100 border-base-300 border container mx-auto m-5"
+    >
+      <div class="collapse-title font-semibold text-lg">
+        Question-1: What is event delegation in the DOM?
+        <hr />
+      </div>
+      <div class="collapse-content text-lg">
+       
+         <ol>
+          <li>1. innerHTML: When we need to insert or retrieve HTML content.  </li>
+          <li>2. innerText: When we need only the visible text from an element.</li>
+          <li>3. textContent: When we need to get all text content, including hidden text.</li>
+         </ol>
+        
+      </div>
+    </div>
     </main>
 
     <script src="./script/back.js"></script>
-</body>
+  </body>
 </html>
