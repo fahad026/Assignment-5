@@ -519,3 +519,16 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('Eighth box button not found.');
     }
 });
+
+// clear history
+
+
+// Select the 'Clear History' button and activity comments container
+const clearHistoryButton = document.getElementById('clear-history');
+const activityCommentsContainer = document.getElementById('activity-log');
+
+// Add an event listener to the "Clear History" button
+clearHistoryButton.addEventListener('click', function (){
+    // Clear all comments inside the activity log
+    activityCommentsContainer.innerHTML = ''; // This removes all child elements (comments)
+});

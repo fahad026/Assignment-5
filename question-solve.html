@@ -14,8 +14,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
 
-  <body class="bg-gray-200">
-    <header class="mx-auto container bg-white rounded-lg p-2">
+  <body class="">
+    <header class="mx-auto container bg-gray-200 rounded-lg p-2">
       <!-- navbar section -->
       <section>
         <nav class="flex items-center justify-between mt-2 mb-3">
@@ -50,7 +50,7 @@
       <!-- question-1 -->
       <div
         tabindex="0"
-        class="collapse collapse-open bg-base-100 border-base-300 border container mx-auto"
+        class="collapse collapse-open bg-base-100 border-base-300 border container mx-auto bg-gray-200"
       >
         <div class="collapse-title font-semibold text-lg">
           Question-1: What are the different ways to select element in the DOM?
@@ -67,7 +67,7 @@
       <!-- question-2 -->
       <div
         tabindex="0"
-        class="collapse collapse-open bg-base-100 border-base-300 border container mx-auto m-5"
+        class="collapse collapse-open bg-base-100 border-base-300 border container mx-auto m-5 bg-gray-200"
       >
         <div class="collapse-title font-semibold text-lg">
           Question-2: What is the difference between innerHTML, innerText, and textContent?
@@ -87,7 +87,7 @@
       <!-- question-3 -->
       <div
       tabindex="0"
-      class="collapse collapse-open bg-base-100 border-base-300 border container mx-auto m-5"
+      class="collapse collapse-open bg-base-100 border-base-300 border container mx-auto m-5 bg-gray-200"
     >
       <div class="collapse-title font-semibold text-lg">
         Question-3: What is event delegation in the DOM?
@@ -103,6 +103,20 @@
         
       </div>
     </div>
+    <!-- question-4 -->
+    <div
+    tabindex="0"
+    class="collapse collapse-open bg-base-100 border-base-300 border container mx-auto m-5 bg-gray-200"
+  >
+    <div class="collapse-title font-semibold text-lg">
+      Question-4: What is event bubbling in the DOM?
+      <hr />
+    </div>
+    <div class="collapse-content text-lg">
+     <p>Event Bubbling is a type of event propagation in which an event originates from the target element and moves up to its parent and ancestors in the DOM tree. It follows a bottom-to-top approach.</p>
+      
+    </div>
+  </div>
     </main>
 
     <script src="./script/back.js"></script>
